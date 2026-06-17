@@ -1,0 +1,128 @@
+.body {
+  background-color: #0000002b;
+}
+.section-slider {
+  /* display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px; */
+}
+.image-slider {
+  position: relative;
+  width: 800px;
+  height: 426px;
+  display: flex;
+  justify-content: center;
+
+  /* margin-left: 3%; */
+}
+.fasilitas-bersama h3 {
+  position: absolute;
+  top: 20px;
+  left: 12%;
+  padding: 5px 10px;
+
+  background-color: rgba(0, 0, 0, 0.18);
+  color: white;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.fasilitas-kamar h3 {
+  position: absolute;
+  top: 20px;
+  left: 12%;
+  padding: 5px 10px;
+
+  background-color: rgba(0, 0, 0, 0.18);
+  color: white;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.slide-k {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  clip-path: circle(0.5% at 0 50%);
+}
+.slide-b {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition-delay: 50s;
+  transition: opacity 0.5s ease-in-out;
+  clip-path: circle(0.5% at 0 50%);
+}
+.slide-k img {
+  width: 100%;
+  border-radius: 15px;
+}
+.slide-b img {
+  width: 100%;
+  border-radius: 15px;
+}
+.navigations-k {
+  position: absolute;
+  display: flex;
+  bottom: 47%;
+  left: 15%;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #ede3d4;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  line-height: 15px;
+}
+.navigations-b {
+  position: absolute;
+  display: flex;
+  bottom: 60%;
+  left: 15%;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #ede3d4;
+  font-weight: 500;
+  /* font-size: 20px; */
+  letter-spacing: 1.5px;
+  line-height: 15px;
+}
+.slider-btn-k,
+.slider-btn-b {
+  cursor: pointer;
+  /* padding: 2px; */
+  margin: 5px;
+}
+.slider-btn-k:hover,
+.slider-btn-b:hover {
+  margin-left: 13px;
+}
+.activeK {
+  opacity: 1;
+}
+.activeB {
+  opacity: 1;
+}
+
+.slide-k.activeK {
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+  transition-property: clip-path;
+}
+.slide-b.activeB {
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+  transition-property: clip-path;
+}
+.slider-btn-k.activeK,
+.slider-btn-b.activeB {
+  padding: 5px;
+  /* margin-left: 10px; */
+  background-color: #a2171796;
+}
